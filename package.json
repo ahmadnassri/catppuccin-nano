@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "bin": {
+    "build": "src/build.js"
+  },
+  "scripts": {
+    "build": "node --no-warnings src/build.js"
+  },
+  "dependencies": {
+    "@catppuccin/palette": "^1.7.1"
+  }
+}

@@ -1,0 +1,57 @@
+name: push
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+
+jobs:
+  build:
+    timeout-minutes: 5
+
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          submodules: true
+
+      - uses: actions/setup-node@v4.2.0
+        with:
+          registry-url: https://npm.pkg.github.com
+          node-version: latest
+          cache: npm
+
+      - name: get app token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+
+      - name: get gitHub app user id
+        id: get-user-id
+        run: echo "user-id=$(gh api "/users/${{ steps.app-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+
+      - name: configure git
+        run: |
+          git config --global user.name '${{ steps.app-token.outputs.app-slug }}[bot]'
+          git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com>'
+
+      - uses: actions/checkout@v4.1.7
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+
+      - run: npm install
+      - run: npm run build
+
+      - name: commit-changes
+        run: |
+          git add dist
+          git commit -m "build: update syntax files [skip ci]"
+          git push

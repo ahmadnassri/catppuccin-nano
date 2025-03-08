@@ -1,0 +1,96 @@
+{
+  "normal": "text",
+
+  "white": "surface2",
+  "brightwhite": "surface1",
+
+  "beet": "mauve",
+  "black": "subtext1",
+  "brightblack": "surface2",
+  "gray": "surface2",
+  "grey": "surface2",
+
+  "blue": "blue",
+  "brightblue": "blue",
+
+  "brick": "peach",
+  "brightbrick": "peach",
+
+  "brown": "flamingo",
+  "brightbrown": "flamingo",
+
+  "crimson": "maroon",
+  "brightcrimson": "maroon",
+
+  "cyan": "teal",
+  "brightcyan": "teal",
+
+  "green": "green",
+  "brightgreen": "green",
+
+  "lagoon": "sky",
+  "brightlagoon": "sky",
+
+  "latte": "rosewater",
+  "brightlatte": "rosewater",
+
+  "lime": "yellow",
+  "brightlime": "yellow",
+
+  "magenta": "mauve",
+  "brightmagenta": "mauve",
+
+  "mauve": "mauve",
+  "brightmauve": "mauve",
+
+  "mint": "green",
+  "brightmint": "green",
+
+  "ocher": "yellow",
+  "brightocher": "yellow",
+
+  "orange": "peach",
+  "brightorange": "peach",
+
+  "peach": "peach",
+  "brightpeach": "peach",
+
+  "pink": "pink",
+  "brightpink": "pink",
+
+  "plum": "mauve",
+  "brightplum": "mauve",
+
+  "purple": "pink",
+  "brightpurple": "pink",
+
+  "red": "red",
+  "brightred": "red",
+
+  "rosy": "rosewater",
+  "brightrosy": "rosewater",
+
+  "sage": "sapphire",
+  "brightsage": "sapphire",
+
+  "sand": "yellow",
+  "brightsand": "yellow",
+
+  "sea": "blue",
+  "brightsea": "blue",
+
+  "sky": "sky",
+  "brightsky": "sky",
+
+  "slate": "lavender",
+  "brightslate": "lavender",
+
+  "tawny": "yellow",
+  "brighttawny": "yellow",
+
+  "teal": "teal",
+  "brightteal": "teal",
+
+  "yellow": "yellow",
+  "brightyellow": "yellow"
+}
