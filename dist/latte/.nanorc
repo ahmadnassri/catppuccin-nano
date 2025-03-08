@@ -1,0 +1,24 @@
+set tabsize 2
+set tabstospaces
+set autoindent
+set trimblanks
+set linenumbers
+set indicator
+
+set mouse
+
+set titlecolor #456,#AAB
+set minicolor #456,#AAB
+set numbercolor #456,#AAB
+set scrollercolor #456,#AAB
+set errorcolor bold,#AAB,#C13
+
+set promptcolor bold,#456,#493
+set selectedcolor ,#456
+set statuscolor #BBC
+set stripecolor #C13,#AAB
+
+set keycolor #456
+set functioncolor #BBC
+
+include ~/.nano/*.nanorc

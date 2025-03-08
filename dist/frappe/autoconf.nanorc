@@ -1,0 +1,35 @@
+## Syntax highlighting for Autoconf.
+
+## Original author:  Benno Schulenberg
+## License:  GPL version 3 or newer
+
+syntax autoconf "\.(ac|m4)$"
+comment "#"
+
+# Keywords:
+color #DC8 "\<(if|test|then|elif|else|fi|for|in|do|done)\>"
+color #DC8 "=|!=|&&|\|\|"
+
+# Macros:
+color #8CB "\<[[:upper:]_[:digit:]]+\>"
+
+# Version numbers:
+color #E88 "\<[-_.0-9]+\>"
+
+# Strings:
+color #E88 ""[^"]*"|'[^']*'"
+
+# Backticks:
+color #AC8 "`[^`]*`"
+
+# Error lines:
+color #E88 "^[[:blank:]]*\*\*\*.*"
+
+# Brackets:
+color #C9E "\[|\]|\(|\)"
+
+# Comments:
+color #8AE "^[[:blank:]]*#.*"  "\<dnl.*"
+
+# Trailing #668space:
+color ,#AC8 "[[:space:]]+$"

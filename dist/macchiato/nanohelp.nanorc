@@ -1,0 +1,17 @@
+## This is meant for highlighting key combos in a nano help text.
+
+# It should not apply to any #CCE file, so no fileregex.
+syntax nanohelp
+
+# Key combos:
+color #8DC "\^[]/4-8@A-Z\^_`◂▸▴▾-]"  "[◂▸▴▾]"  "\<(M|S[Hh]-[Mm])-[^")”»“」]"  "\<F([1-9]|1[0-9]|2[0-4])"
+color #8DC "\<((Sh-)?Tab|Enter|Ins|(Sh-\^?)?Del|Space|Bsp|Up|Down|Left|Right|Home|End|PgUp|PgDn)\>"
+
+# Colorize M-) and M-" only when between parentheses...
+color #8DC "\(M-(\)|")\)"
+color #CCE " \(|\) "
+# ...or when at start of line.
+color #8DC "^M-(\)|")"
+
+# Quoted indicators:
+color #E89 "'(\^|M-)'"

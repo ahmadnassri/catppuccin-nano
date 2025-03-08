@@ -1,0 +1,61 @@
+## Syntax highlighting for Lua.
+
+## Original author:  Matthew Wild
+## License:  GPL version 3 or newer
+
+syntax lua "\.lua$"
+magic "Lua script"
+comment "--"
+
+linter luacheck --no-color
+
+color #456 "\[\[.*\]\]"
+
+# Operators
+color #EC9 ":|\*|/|%|\+|-|\^|>|>=|<|<=|~=|=|\.\.|#|\<(not|and|or)\>"
+# Don't partially color ... as an operator
+color #CCE "\.\.\."
+
+# Statements
+color #8AE "\<(do|end|while|repeat|until|if|elseif|then|else|for|in|function|local|return|break)\>"
+
+# Keywords
+color #EC9 "\<(_G|_VERSION|assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|load|loadfile|module|next|pairs|pcall|print|rawequal|rawget|rawlen|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)[[:blank:]]*\("
+
+# Standard library
+color #EC9 "\<coroutine\.(create|isyieldable|resume|running|status|wrap|yield)\>"
+color #EC9 "\<debug\.(debug|(get|set)(fenv|hook|local|metatable|(up|user)value)|getinfo|getregistry|traceback|upvalue(id|join))\>"
+color #EC9 "\<io\.(close|flush|input|lines|output|p?open|read|tmpfile|type|write|std(in|out|err))\>"
+color #EC9 "\<math\.(abs|acos|asin|atan2?|ceil|cosh?|deg|exp|floor|fmod|frexp|huge|ldexp|log10|log)\>"
+color #EC9 "\<math\.((max|min)(integer)?|modf?|pi|pow|rad|random(seed)?|sinh?|sqrt|tan|tointeger|type|ult)\>"
+color #EC9 "\<os\.(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)\>"
+color #EC9 "\<package\.(config|cpath|loaded|loadlib|path|preload|#8AErchers|#8AErchpath|seeall)\>"
+color #EC9 "\<string\.(byte|char|dump|find|format|gmatch|gsub|len|lower|match|pack|packsize|rep|reverse|sub|unpack|upper)\>"
+color #EC9 "\<table\.(concat|insert|maxn|move|pack|remove|sort|unpack)\>"
+color #EC9 "\<utf8\.(char|charpattern|codepoint|codes|len|offset)\>"
+
+# File handle methods
+color #EC9 ":(close|flush|lines|read|seek|setvbuf|write)\>"
+
+# External files
+color #AD9 "\<(dofile|require)\>"
+
+# Special words
+color #C9E "\<(false|nil|true)\>"
+
+# Decimal and hexadecimal numbers
+color #E89 "\<[0-9]+(\.[0-9]*)?([Ee][+-]?[0-9]+)?\>"
+color #E89 "\<0x[[:xdigit:]]+(\.[[:xdigit:]]*)?([Pp][+-]?[0-9]+)?\>"
+
+# Brackets
+color #C9E "\(|\)|\[|\]|\{|\}"
+
+# Shebang
+color #8DC "^#!.*"
+
+# Strings
+color #E89 ""([^"\]|\\.)*"|'([^'\]|\\.)*'"
+
+# Simple comments and multiline comments
+color #AD9 "--.*"
+color #AD9 start="--\[\[" end="\]\]"

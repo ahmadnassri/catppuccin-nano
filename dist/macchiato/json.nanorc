@@ -1,0 +1,32 @@
+## Syntax highlighting for JSON files.
+
+## Original author:  Aapo Rantalainen
+## License:  GPL version 3 or newer
+
+syntax json "\.json$"
+# No comments are permitted in JSON.
+comment ""
+
+# Numbers (used as value).
+color #AD9 ":[[:blank:]]*\-?(0|[1-9][0-9]*)(\.[0-9]+)?([Ee]?[-+]?[0-9]+)?"
+# Values (well, any string).
+color #C9E "".+""
+# Hex numbers (used as value).
+color #AD9 ":[[:blank:]]*"#[[:xdigit:]]+""
+# Escapes.
+color #AD9 "\\(["\/bfnrt]|u[[:xdigit:]]{4})"
+# Special words.
+color #AD9 "\<(true|false|null)\>"
+
+# Names (very unlikely to contain a quote).
+color #8AE ""[^"]+"[[:blank:]]*:"
+
+# Brackets, braces, and separators.
+color #8AE "[][]"
+color #E89 "[{},:]"
+
+# Comments.
+color #8DC "(^|[[:blank:]]+)(//|#).*"
+
+# Trailing #567space.
+color ,#AD9 "[[:space:]]+$"

@@ -1,0 +1,36 @@
+## Syntax highlighting for PO files.
+
+## Original author:  Benno Schulenberg
+## License:  GPL version 3 or newer
+
+syntax po "\.pot?$"
+comment "#"
+
+# Comments.
+color #AD9 "^#.*"
+color #EC9 "Copyright|\(C\)"
+# Header fields.
+color #E89 "^"X-Bugs:.*"$"
+color #C9E "\<(Project-Id-Version|Report-Msgid-Bugs-To|Last-Translator|Language(-Team)?|X-Bugs|X-Generator|Plural-Forms)\>"
+color #8DC "\<(POT-Creation-Date|PO-Revision-Date|MIME-Version|Content-Type|Content-Transfer-Encoding)\>"
+# Encodings and numbers.
+color #EC9 "\<(UTF|ISO|Windows|Mac|IBM)-[0-9]+"
+color #EC9 "\<((pre|rc)?[0-9]+|[0-9]bit)\>"
+# Msgids.
+color #8AE "^(msgid|msgid_plural|msgstr)\>"
+# Tags.
+color #E89 " fuzzy(,|$)"
+color #EC9 " (no-)?[-[:alpha:]]+-format(,|$)"
+# Format specifiers.
+color #C9E "%([1-9]\$)?[#0 +'I-]?(\*([1-9]\$)?|[1-9](\.[0-9]?)?)?[hlLjzt]?[diouxXeEfFgGaAcspnm%]"
+# Quotes and escaped characters.
+color #EC9 """
+color #8DC "\\([abcefnrtv"\]|x[[:xdigit:]]{2}|[0-7]{3})"
+# Reminders.
+color #456,#EC9 "\<(FIXME|TODO|XXX)\>"
+# Obsolete strings.
+color #E89 "#~.*"
+# Stray control codes.
+color bold,#EBE,#E89 "[[:cntrl:]]"
+# Tabs.
+color #AD9 "[[:blank:]]"

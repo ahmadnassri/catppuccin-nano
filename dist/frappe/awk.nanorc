@@ -1,0 +1,37 @@
+## Syntax highlighting for AWK scripts.
+
+syntax awk "\.awk$"
+header "^#!.*awk"
+magic "awk script"
+comment "#"
+
+# Records.
+color #E88 "\$[0-9A-Za-z_!@#$*?-]+"
+# Awk-set variables.
+color #E88 "\<(ARGC|ARGIND|ARGV|BINMODE|CONVFMT|ENVIRON|ERRNO|FIELDWIDTHS)\>"
+color #E88 "\<(FILENAME|FNR|FS|IGNORECASE|LINT|NF|NR|OFMT|OFS|ORS)\>"
+color #E88 "\<(PROCINFO|RS|RT|RSTART|RLENGTH|SUBSEP|TEXTDOMAIN)\>"
+# Function declarations and special patterns.
+color #AC8 "\<(function|extension|BEGIN|END)\>"
+# Operators.
+color #AC8 "\{|\}|\(|\)|\;|\[|\]|\\|<|>|!|=|&|\+|-|\*|%|/|\?:|\^|\|"
+# Flow control.
+color #DC8 "\<(for|if|while|do|else|in|delete|exit)\>"
+color #DC8 "\<(break|continue|return)\>"
+# I/O statements.
+color #AC8 "\<(close|fflush|getline|next|nextfile|print|printf|system)\>"
+# Standard functions.
+color #C9E "\<(atan2|cos|exp|int|log|rand|sin|sqrt|srand)\>"
+color #C9E "\<(asort|asorti|gensub|gsub|index|length|match)\>"
+color #C9E "\<(split|sprintf|strtonum|sub|substr|tolower|toupper)\>"
+color #C9E "\<(mktime|strftime|systime)\>"
+color #C9E "\<(and|compl|lshift|or|rshift|xor)\>"
+color #C9E "\<(bindtextdomain|dcgettext|dcngettext)\>"
+
+# Strings.
+color #DC8 ""([^"\]|\\.)*""
+# Comments.
+color #8AE "(^|[[:blank:]])#.*"
+
+# Trailing #668space.
+color ,#AC8 "[[:space:]]+$"

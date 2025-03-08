@@ -1,0 +1,31 @@
+## Syntax highlighting for HTML.
+
+syntax html "\.html?$"
+magic "HTML document"
+comment "<!--|-->"
+
+formatter tidy -m -q
+
+# Tags:
+color #8CB "<[[:alpha:]/!?][^>]*>"
+# Bold, italic, underlined, emphasis, and importance:
+color #C9E "</?(b|i|u|em|strong)>"
+
+# Named character references:
+color #E88 "&[^;[:space:]]*;"
+
+# Attributes:
+color #E88 "\<(abbr|accept(-charset)?|accesskey|action|alink|align|alt|archive|axis|background|bgcolor|border)="
+color #E88 "\<(cell(padding|spacing)|char(off|set)?|checked|cite|class(id)?|compact|code(base|tag)?|cols(pan)?)="
+color #E88 "\<(content(editable)?|contextmenu|coords|data|datetime|declare|defer|dir|disabled|enctype)="
+color #E88 "\<(for|frame(border)?|headers|height|hidden|href(lang)?|hspace|http-equiv|id|ismap)="
+color #E88 "\<(label|lang|link|longdesc|margin(height|width)|maxlength|media|method|multiple)="
+color #E88 "\<(name|nohref|noresize|noshade|object|onclick|onfocus|onload|onmouseover|profile|readonly|rel|rev)="
+color #E88 "\<(rows(pan)?|rules|scheme|scope|scrolling|selected|shape|size|span|src|standby|start|style|summary)="
+color #E88 "\<(tabindex|target|text|title|type|usemap|valign|value(type)?|vlink|vspace|width|xmlns|xml:space)="
+
+# Strings:
+color #AC8 ""([^"\]|\\.)*""
+
+# Comments:
+color #DC8 start="<!--" end="-->"

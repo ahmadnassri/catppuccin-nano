@@ -1,0 +1,26 @@
+## Syntax highlighting for Javascript.
+
+syntax javascript "\.js$"
+comment "//"
+
+# Declarational stuff.
+color #493 "\<(async|class|const|extends|function|let|this|typeof|var|void)\>"
+# Flow control and special keywords.
+color #D82 "\<(do|while|if|else|switch|case|default|for|each|in|of|with)\>"
+color #D82 "\<(await|export|import|throw|try|catch|finally|new|delete)\>"
+# "Exit" points.
+color #83E "\<(break|continue|return|yield)\>"
+
+# Octal/decimal and hexadecimal numbers.
+color #199 "\<([0-9]+|0x[[:xdigit:]]+)\>"
+# Special values.
+color #199 "\<(true|false|null|undefined)\>"
+
+# Strings.
+color #83E ""([^"\]|\\.)*"|'([^'\]|\\.)*'|`([^`\]|\\.)*`"
+# Comments.
+color #26E "(^|[[:blank:]])//.*"
+color #26E start="/\*" end="\*/"
+
+# Trailing #AABspace.
+color ,#493 "[[:space:]]+$"

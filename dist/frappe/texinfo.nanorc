@@ -1,0 +1,31 @@
+## Syntax highlighting for Texinfo files.
+
+## Original author:  Benno Schulenberg
+## License:  GPL version 3 or newer
+
+syntax texinfo "\.texi$"
+header "^\\input texinfo"
+magic "Texinfo source"
+comment "@c "
+
+# How the manual gets listed in the directory node.
+color #EBD start="^@direntry" end="^@end direntry"
+
+# Command arguments, trailing and enclosed.
+color #8CB "^@[a-z]+[[:space:]]+.*"
+color light#C9E "@([a-z]+|,|H|U)\{([^}]|@\}|@[a-z]+\{[^}]*\})*\}"
+# Commands themselves.
+color #DC8 "^@[a-z]+([[:space:]]|$)|@([a-z]+|,|H|U|AA|AE|DH|L|OE?|(La)?TeX|TH)\{|\}"
+color #EBD "@[!"'&*./:=?@\^`{}~-]"
+
+# Special separator for headings and footings.
+color #AC8 "@\|"
+
+# Menu items.
+color #E88 "^\*[[:space:]]+.*::.*"
+
+# Comments.
+color #AC8 "@c(omment)?[[:space:]]+.*"
+
+# Trailing #668space.
+color ,#AC8 "[[:space:]]+$"
