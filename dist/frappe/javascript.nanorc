@@ -1,25 +1,26 @@
-syntax "JavaScript" "\.(js|ts)$"
+## Syntax highlighting for Javascript.
+
+syntax javascript "\.js$"
 comment "//"
-color #8AE   "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
-color #8AE   "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
-color #8AE   "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
-color #8AE "[A-Za-z_][A-Za-z0-9_]*[[:space:]]*[(]|)"
-color #8CB  "\<(break|case|catch|continue|default|delete|do|else|finally)\>"
-color #8CB  "\<(for|function|get|if|in|instanceof|new|return|set|switch)\>"
-color #8CB  "\<(switch|this|throw|try|typeof|var|void|while|with)\>"
-color #8CB  "\<(null|undefined|NaN)\>"
-color #8CB  "\<(import|as|from|export)\>"
-color #8CB  "\<(const|let|class|extends|get|set|of|async|await|yield)\>"
-color #8CB "\<(true|false)\>"
-color #AC8     "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
-color #AC8     "\<(Map|WeakMap|Set|WeakSet|Promise|Symbol)\>"
-color #AC8     "\<(Number|Object|RegExp|String)\>"
-color #E88 "[-+/*=<>!~%?:&|]"
-color #C9E   "/[^*]([^/]|(\\/))*[^\\]/[gim]*"
-color #C9E   "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
-color #668 "//.*"
-color #668 "/\*.+\*/"
-color #556,#8CB "TODO:?"
-color #DC8 ""(\\.|[^"])*"|'(\\.|[^'])*'|(`|\})(\\.|[^`$]|$[^{])*(\$\{|`)"
+
+# Declarational stuff.
+color #AC8 "\<(async|class|const|extends|function|let|this|typeof|var|void)\>"
+# Flow control and special keywords.
+color #DC8 "\<(do|while|if|else|switch|case|default|for|each|in|of|with)\>"
+color #DC8 "\<(await|export|import|throw|try|catch|finally|new|delete)\>"
+# "Exit" points.
+color #C9E "\<(break|continue|return|yield)\>"
+
+# Octal/decimal and hexadecimal numbers.
+color #8CB "\<([0-9]+|0x[[:xdigit:]]+)\>"
+# Special values.
+color #8CB "\<(true|false|null|undefined)\>"
+
+# Strings.
+color #C9E ""([^"\]|\\.)*"|'([^'\]|\\.)*'|`([^`\]|\\.)*`"
+# Comments.
+color #8AE "(^|[[:blank:]])//.*"
+color #8AE start="/\*" end="\*/"
+
+# Trailing #668space.
 color ,#AC8 "[[:space:]]+$"
-color ,#E88 "	+ +| +	+"
