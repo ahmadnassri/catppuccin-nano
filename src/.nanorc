@@ -13,7 +13,7 @@ set numbercolor normal,brightblack
 set scrollercolor normal,brightblack
 set errorcolor bold,white,red
 
-set promptcolor bold,normal,green
+set promptcolor bold,white,mauve
 set selectedcolor ,normal
 set statuscolor brightwhite
 set stripecolor red,brightblack

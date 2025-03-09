@@ -13,7 +13,7 @@ set numbercolor #456,#AAB
 set scrollercolor #456,#AAB
 set errorcolor bold,#AAB,#C13
 
-set promptcolor bold,#456,#493
+set promptcolor bold,#AAB,#83E
 set selectedcolor ,#456
 set statuscolor #BBC
 set stripecolor #C13,#AAB
