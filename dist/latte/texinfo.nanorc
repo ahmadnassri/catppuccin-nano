@@ -13,7 +13,7 @@ color #E7C start="^@direntry" end="^@end direntry"
 
 # Command arguments, trailing and enclosed.
 color #199 "^@[a-z]+[[:space:]]+.*"
-color light#83E "@([a-z]+|,|H|U)\{([^}]|@\}|@[a-z]+\{[^}]*\})*\}"
+color #83E "@([a-z]+|,|H|U)\{([^}]|@\}|@[a-z]+\{[^}]*\})*\}"
 # Commands themselves.
 color #D82 "^@[a-z]+([[:space:]]|$)|@([a-z]+|,|H|U|AA|AE|DH|L|OE?|(La)?TeX|TH)\{|\}"
 color #E7C "@[!"'&*./:=?@\^`{}~-]"

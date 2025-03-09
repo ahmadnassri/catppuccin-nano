@@ -10,17 +10,17 @@ tabgives "  "
 comment "#"
 
 # Keys:
-color light#AC8 "(\w|::|[/.-])+:( |$)"
-color light#AC8 "\[(\w|::|[/., -])+\]:( |$)"
+color #AC8 "(\w|::|[/.-])+:( |$)"
+color #AC8 "\[(\w|::|[/., -])+\]:( |$)"
 
 # Values (booleans, numbers, octal/hex):
-color light#C9E "[:,] +(Y(es)?|No?|y(es)?|no?|[Tt]rue|[Ff]alse|[Oo](n|ff))( *[]}]|, | +#|$)"
-color light#C9E "[:,] +[+-]?[0-9]+(\.([0-9]+)?)?( *[]}]|, | +#|$)"
-color light#C9E " 0(o[0-7]+|x[[:xdigit:]]+)( *[]}]|, | +#|$)"
+color #C9E "[:,] +(Y(es)?|No?|y(es)?|no?|[Tt]rue|[Ff]alse|[Oo](n|ff))( *[]}]|, | +#|$)"
+color #C9E "[:,] +[+-]?[0-9]+(\.([0-9]+)?)?( *[]}]|, | +#|$)"
+color #C9E " 0(o[0-7]+|x[[:xdigit:]]+)( *[]}]|, | +#|$)"
 color #CCE "[:,]( |$)"
 # Values (dates, strings):
-color light#C9E " [12][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])"
-color light#C9E "("([^"]|\\")+"|'[^']+')"
+color #C9E " [12][0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])"
+color #C9E "("([^"]|\\")+"|'[^']+')"
 
 # Anchors and aliases:
 color #EBD " [&*](\w|-)+( |$)"

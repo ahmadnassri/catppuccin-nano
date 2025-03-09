@@ -2,95 +2,125 @@
   "normal": "text",
 
   "white": "surface2",
+  "lightwhite": "surface1",
   "brightwhite": "surface1",
 
   "beet": "mauve",
   "black": "subtext1",
+  "lightblack": "surface2",
   "brightblack": "surface2",
   "gray": "surface2",
   "grey": "surface2",
 
   "blue": "blue",
+  "lightblue": "blue",
   "brightblue": "blue",
 
   "brick": "peach",
+  "lightbrick": "peach",
   "brightbrick": "peach",
 
   "brown": "flamingo",
+  "lightbrown": "flamingo",
   "brightbrown": "flamingo",
 
   "crimson": "maroon",
+  "lightcrimson": "maroon",
   "brightcrimson": "maroon",
 
   "cyan": "teal",
+  "lightcyan": "teal",
   "brightcyan": "teal",
 
   "green": "green",
+  "lightgreen": "green",
   "brightgreen": "green",
 
   "lagoon": "sky",
+  "lightlagoon": "sky",
   "brightlagoon": "sky",
 
   "latte": "rosewater",
+  "lightlatte": "rosewater",
   "brightlatte": "rosewater",
 
   "lime": "yellow",
+  "lightlime": "yellow",
   "brightlime": "yellow",
 
   "magenta": "mauve",
+  "lightmagenta": "mauve",
   "brightmagenta": "mauve",
 
   "mauve": "mauve",
+  "lightmauve": "mauve",
   "brightmauve": "mauve",
 
   "mint": "green",
+  "lightmint": "green",
   "brightmint": "green",
 
   "ocher": "yellow",
+  "lightocher": "yellow",
   "brightocher": "yellow",
 
   "orange": "peach",
+  "lightorange": "peach",
   "brightorange": "peach",
 
   "peach": "peach",
+  "lightpeach": "peach",
   "brightpeach": "peach",
 
   "pink": "pink",
+  "lightpink": "pink",
   "brightpink": "pink",
 
   "plum": "mauve",
+  "lightplum": "mauve",
   "brightplum": "mauve",
 
   "purple": "pink",
+  "lightpurple": "pink",
   "brightpurple": "pink",
 
   "red": "red",
+  "lightred": "red",
   "brightred": "red",
 
   "rosy": "rosewater",
+  "lightrosy": "rosewater",
   "brightrosy": "rosewater",
 
   "sage": "sapphire",
+  "lightsage": "sapphire",
   "brightsage": "sapphire",
 
   "sand": "yellow",
+  "lightsand": "yellow",
   "brightsand": "yellow",
 
   "sea": "blue",
+  "lightsea": "blue",
   "brightsea": "blue",
 
   "sky": "sky",
+  "lightsky": "sky",
   "brightsky": "sky",
 
   "slate": "lavender",
+  "lightslate": "lavender",
   "brightslate": "lavender",
 
   "tawny": "yellow",
+  "lighttawny": "yellow",
   "brighttawny": "yellow",
 
   "teal": "teal",
+  "lightteal": "teal",
   "brightteal": "teal",
 
   "yellow": "yellow",
+  "lightyellow": "yellow",
   "brightyellow": "yellow"
 }

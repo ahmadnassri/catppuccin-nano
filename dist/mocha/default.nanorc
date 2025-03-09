@@ -18,7 +18,7 @@ color #EDD "\<[12][0-9]{3}\.(0[1-9]|1[012])\.(0[1-9]|[12][0-9]|3[01])\>"
 color #CAF "<[[:alnum:].%_+-]+@[[:alnum:].-]+\.[[:alpha:]]{2,}>"
 
 # URLs.
-color light#8BF "\<https?://\S+\.\S+[^])>[:space:],.]"
+color #8BF "\<https?://\S+\.\S+[^])>[:space:],.]"
 
 # Bracketed captions in certain config files.
 color #AD9 "^\[[^][]+\]$"
